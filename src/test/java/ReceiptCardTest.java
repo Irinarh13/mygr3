@@ -7,9 +7,8 @@ import static java.awt.Color.*;
 
 public class ReceiptCardTest {
 
-
     @Test
-    void shouldTest() {
+    void shouldTest1() {
         open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Василий");
@@ -106,5 +105,6 @@ public class ReceiptCardTest {
         form.$(".button__text").click();
         $("[data-test-id=agreement].input_invalid .checkbox__text").shouldBe(visible);
     }
-
 }
+
+
